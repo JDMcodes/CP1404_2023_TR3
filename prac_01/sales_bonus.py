@@ -4,8 +4,10 @@ If sales are under $1,000, the user gets a 10% bonus.
 If sales are $1,000 or over, the bonus is 15%.
 """
 
+
+
 #Create list to store all bonuses and sales for future use or validation
-#set initial sales value to initialise loop
+
 bonuses= []
 sales = []
 
@@ -19,26 +21,26 @@ i = 0
 #     get sales
 # do next thing
 
-if not sales:
-    sale = sales.append(float(input("Enter sale: $")))
-    while sales[i] >= 0:
-        if sales[i] < 1000:
-            bonus = sales[i] * 0.1
-            print(f"Bonus for this sale: ${bonus:.2f}")
-            bonuses.append(bonus)
-            i= i + 1
-            # # validation
-            #print(i)
-            #print(bonuses)
-        else:
-            bonus = sales[i] * 0.15
-            print(f"Bonus for this sale: ${bonus:.2f}")
-            bonuses.append(bonus)
-            i = i + 1
-            # # validation
-            # print(i)
-            # print(bonuses)
-        sales.append(float(input("Enter sales: $")))
+
+sale = sales.append(float(input("Enter sale: $")))
+while sales[i] >= 0:
+    if sales[i] < 1000:
+        bonus = sales[i] * 0.1
+        print(f"Bonus for this sale: ${bonus:.2f}")
+        bonuses.append(bonus)
+        i= i + 1
+        # # validation
+        #print(i)
+        #print(bonuses)
+    else:
+        bonus = sales[i] * 0.15
+        print(f"Bonus for this sale: ${bonus:.2f}")
+        bonuses.append(bonus)
+        i = i + 1
+        # # validation
+        # print(i)
+        # print(bonuses)
+    sales.append(float(input("Enter sales: $")))
 del sales[i]
 total_sales = sum(sales)
 total_bonuses = sum(bonuses)
