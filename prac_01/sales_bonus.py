@@ -3,19 +3,16 @@ Program to calculate and display a user's bonus based on sales.
 If sales are under $1,000, the user gets a 10% bonus.
 If sales are $1,000 or over, the bonus is 15%.
 """
+# Create list to store all bonuses and sales for future use or validation
 
-
-
-#Create list to store all bonuses and sales for future use or validation
-
-bonuses= []
+bonuses = []
 sales = []
 
-#indexes for lists
+# indexes for lists
 i = 0
 
-#loop to satisfy algorithm:
-#get sales
+# loop to satisfy algorithm:
+# get sales
 # while sales >= 0
 #     calculate bonus
 #     get sales
@@ -28,10 +25,10 @@ while sales[i] >= 0:
         bonus = sales[i] * 0.1
         print(f"Bonus for this sale: ${bonus:.2f}")
         bonuses.append(bonus)
-        i= i + 1
+        i = i + 1
         # # validation
-        #print(i)
-        #print(bonuses)
+        # print(i)
+        # print(bonuses)
     else:
         bonus = sales[i] * 0.15
         print(f"Bonus for this sale: ${bonus:.2f}")
