@@ -5,17 +5,9 @@ def main():
 
 
 def get_password():
-    while True:
-
-        password = input("Please enter password:")
-
-        if len(password) < 10:
-            print("please enter a password with more than 10 characters")
-            continue
-        if " " in password:
-            print("password cannot contain spaces")
-            continue
-        break
+    password = input("Please enter password:")
+    if len(password) < 10 or " " in password:
+        print("please enter a valid password")
 
     return password
 
