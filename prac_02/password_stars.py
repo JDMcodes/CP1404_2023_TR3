@@ -1,5 +1,5 @@
 def main():
-    """Stores and input password and prints a censored copy"""
+    """Prints an input password as a censored copy"""
     password = get_password()
     print_censored_word(password)
     return
