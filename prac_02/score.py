@@ -6,6 +6,7 @@ import random
 
 
 def main():
+    """Gets a user score and passes an evaluation, repeats this process on a random score"""
     score = float(input("Enter score: "))
     while 0 >= score >= 100:
         print("Invalid score, please enter a number from 0 to 100")
@@ -17,6 +18,7 @@ def main():
 
 
 def evaluate_score(score):
+    """evaluates a score"""
     if score > 90:
         evaluation = "Excellent"
     elif score >= 50:
