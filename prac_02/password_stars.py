@@ -1,3 +1,9 @@
+"""
+Password Check with functions
+
+"""
+
+
 def main():
     """Prints an input password as a censored copy"""
     password = get_password()
@@ -7,12 +13,12 @@ def main():
 
 def get_password():
     """Validates and stores a password containing no spaces and more than 10 characters"""
-    new_password = input("Please enter new password:")
-    if len(new_password) < 10 or " " in new_password:
+    password = input("Please enter new password:")
+    if len(password) < 10 or " " in password:
         print("please enter a valid password")
-        new_password = input("Please enter password:")
+        password = input("Please enter password:")
 
-    return new_password
+    return password
 
 
 def print_censored_word(word):
