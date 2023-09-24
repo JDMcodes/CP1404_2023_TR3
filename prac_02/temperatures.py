@@ -31,20 +31,14 @@ def get_temperature_unit():
 
 def convert_f_to_c():
     """Converts input temperature from Fahrenheit to Celsius"""
-    try:
-        fahrenheit = float(input("Enter Temperature in Fahrenheit:"))
-    except ValueError:
-        print("Temperature must be a number")
+    fahrenheit = float(input("Enter Temperature in Fahrenheit:"))
     celsius = 5 / 9 * (fahrenheit - 32)
     print(f"Result: {celsius:.2f} C")
 
 
 def convert_c_to_f():
     """Converts input temperature from Celsius to Fahrenheit"""
-    try:
-        celsius = float(input("Enter Temperature in Celsius:"))
-    except ValueError:
-        print("Temperature must be a number")
+    celsius = float(input("Enter Temperature in Celsius:"))
     fahrenheit = celsius * 9.0 / 5 + 32
     print(f"Result: {fahrenheit:.2f} F")
 
