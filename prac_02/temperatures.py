@@ -8,9 +8,11 @@ def main():
     """Converts temperature based on a user selection from a menu"""
     temperature_unit = get_temperature_unit()
     if temperature_unit == "F":
-        convert_f_to_c()
+        fahrenheit = convert_f_to_c()
+        print(f"Result: {fahrenheit:.2f} F")
     elif temperature_unit == "C":
-        convert_c_to_f()
+        celsius = convert_c_to_f()
+        print(f"Result: {celsius:.2f} C")
     else:
         print("Thank you")
 
@@ -32,14 +34,13 @@ def get_temperature_unit():
 def convert_f_to_c():
     """Converts input temperature from Fahrenheit to Celsius"""
     fahrenheit = float(input("Enter Temperature in Fahrenheit:"))
-    celsius = 5 / 9 * (fahrenheit - 32)
-    print(f"Result: {celsius:.2f} C")
+    return 5 / 9 * (fahrenheit - 32)
+
 
 
 def convert_c_to_f():
     """Converts input temperature from Celsius to Fahrenheit"""
     celsius = float(input("Enter Temperature in Celsius:"))
-    fahrenheit = celsius * 9.0 / 5 + 32
-    print(f"Result: {fahrenheit:.2f} F")
+    return celsius * 9.0 / 5 + 32
 
 main()
