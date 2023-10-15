@@ -1,6 +1,8 @@
 """
 CP1404/CP5632 Practical 5
 read and process tenis data
+Estimate: 30 minutes
+Actual:   43 minutes
 """
 
 
