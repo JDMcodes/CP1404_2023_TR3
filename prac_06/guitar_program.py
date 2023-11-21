@@ -13,23 +13,25 @@ def main():
 
     print("My Guitars!")
     guitar_list = []
-    while len(guitar_list) >= 0:
-        new_guitar_name = input("Name:")
-        if new_guitar_name == "":
-            break
-        else:
-            try:
-                new_guitar_year = int(input("Year:"))
-            except ValueError:
-                print("enter a valid number for year")
-                new_guitar_year = int(input("Year:"))
-            try:
-                new_guitar_cost = float(input("Cost:"))
-            except ValueError:
-                print("enter a valid number for cost")
-                new_guitar_cost = float(input("Year:"))
-            new_guitar = Guitar(new_guitar_name, new_guitar_year, new_guitar_cost)
-            guitar_list.append(new_guitar)
+    # while len(guitar_list) >= 0:
+    #     new_guitar_name = input("Name:")
+    #     if new_guitar_name == "":
+    #         break
+    #     else:
+    #         try:
+    #             new_guitar_year = int(input("Year:"))
+    #         except ValueError:
+    #             print("enter a valid number for year")
+    #             new_guitar_year = int(input("Year:"))
+    #         try:
+    #             new_guitar_cost = float(input("Cost:"))
+    #         except ValueError:
+    #             print("enter a valid number for cost")
+    #             new_guitar_cost = float(input("Year:"))
+    #         new_guitar = Guitar(new_guitar_name, new_guitar_year, new_guitar_cost)
+    #         guitar_list.append(new_guitar)
+    guitar_list.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
+    guitar_list.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
 
     for i, guitar in enumerate(guitar_list, 1):
         if guitar.is_vintage():
