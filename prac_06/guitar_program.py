@@ -5,7 +5,10 @@ actual: 40min
 """
 
 from guitar import Guitar
+
+
 def main():
+
     """Program that uses the guitar class to create a list of your guitars and then prints a summary"""
 
     print("My Guitars!")
@@ -34,4 +37,6 @@ def main():
         else:
             vintage_string = ""
         print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage_string}")
+
+
 main()
