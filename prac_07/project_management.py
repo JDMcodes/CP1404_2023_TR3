@@ -17,18 +17,24 @@ def main():
     choice = get_menu_choice()
     while choice != "Q":
         if choice == "L":
-            projects = load_projects("projects.txt")
+            file = input("please enter filename:")
+            try:
+                projects = load_projects(file)
+            except ValueError:
+                print("please enter correct file name including extensions eg. projects.txt")
+                file = input("please enter filename:")
+                projects = load_projects(file)
             choice = get_menu_choice()
         elif choice == "S":
-            save_projects(projects,"projects.txt")
+            save_projects(projects,file)
             choice = get_menu_choice()
         elif choice == "D":
-            display_projects()
+            display_projects(projects)
             choice = get_menu_choice()
         elif choice == "F":
             date = input("Show projects that start after date (dd/mm/yy):")
             formatted_date = format_date(date)
-            filter_projects(formatted_date)
+            filter_projects(formatted_date, projects)
             choice = get_menu_choice()
         elif choice == "A":
             add_project()
@@ -76,6 +82,17 @@ def display_projects(project_list):
     print("Incomplete Projects:")
     for project in incomplete:
         print(project)
+
+def filter_projects(formatted_date, project_list):
+    project_list.sort()
+    for project in project_list:
+        if project.date >= formatted_date:
+            print(project)
+
+def add_project()
+
+
+
 
 
 
