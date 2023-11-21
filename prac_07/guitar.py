@@ -2,7 +2,7 @@
 
 Guitar Class
 Estimate: 30min
-Actual: 25min
+Actual: 35min
 """
 
 
@@ -21,6 +21,11 @@ class Guitar:
         """Returns a string describing the Guitar Object"""
         return f"{self.name}({self.year}): ${self.cost}"
 
+    def __lt__(self, other):
+        """Returns True if self's year is
+           less than other's name, and False otherwise"""
+        return self.year < other.year
+
     def get_age(self):
         """Determines Guitars Age"""
         age = 2023 - self.year
@@ -33,6 +38,7 @@ class Guitar:
         else:
             vintage = False
         return vintage
+
 
 
 
