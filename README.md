@@ -10,6 +10,7 @@ I am Jarred Muller, a third year Data Science student at James Cook University, 
 
 ## Subject Links
 https://github.com/CP1404/Practicals
+
 https://github.com/CP1404/Starter/wiki/Programming-Patterns
 
 
