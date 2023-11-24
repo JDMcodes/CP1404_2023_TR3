@@ -1,7 +1,7 @@
 """Band class for CP1404
 
 estimate: 30min
-actual: """
+actual: "40min"
 
 
 class Band:
