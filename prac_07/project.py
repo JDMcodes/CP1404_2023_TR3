@@ -35,3 +35,9 @@ class Project:
         else:
             complete = False
         return complete
+
+    def project_update(self,priority,percent):
+        self.priority = priority
+        self.percent = percent
+
+

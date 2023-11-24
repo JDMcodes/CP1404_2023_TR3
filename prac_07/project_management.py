@@ -37,15 +37,16 @@ def main():
             filter_projects(formatted_date, projects)
             choice = get_menu_choice()
         elif choice == "A":
-            add_project()
+            new_project = add_project()
+            projects.append(new_project)
             choice = get_menu_choice()
         elif choice == "U":
-            update_project()
+            update_project(projects)
             choice = get_menu_choice()
         else:
-            break
+            choice = get_menu_choice()
 
-    print("thanks")
+    print("Thank you for using custom-built project management software.")
 
 def load_projects(file):
     "loads a file and returns a list of projects contained in it"
@@ -53,7 +54,7 @@ def load_projects(file):
     in_file = open(file, 'r')
     in_file.readline()
     for line in in_file:
-        parts = line.strip().split()
+        parts = line.strip().split("\t")
         project = Project(parts[0], parts[1], parts[2], parts[3], parts[4])
         project_list.append(project)
     return project_list
@@ -86,21 +87,41 @@ def display_projects(project_list):
 def filter_projects(formatted_date, project_list):
     project_list.sort()
     for project in project_list:
-        if project.date >= formatted_date:
+        if format_date(project.date) >= formatted_date:
             print(project)
 
-def add_project()
+def add_project():
+    name = input("Name:")
+    start = input("Start:")
+    start = format_date(start)
+    priority = input("Priority:")
+    cost = input("Estimated Cost:")
+    completion = input("Completion:")
+    new_project = Project(name,start,priority,cost,completion)
+    return new_project
+
+def update_project(project_list):
+    for i, project in enumerate(project_list, 1):
+        print(f"{i} {project}")
+    try:
+        choice = int(input("Project choice:"))
+    except ValueError:
+        print("please enter choice as a number")
+        choice = int(input("Project choice:"))
+    print(project_list[choice])
+    new_priority = input("New Priority:")
+    new_percent = input("New Percent:")
+    project_list[choice].project_update(new_priority,new_percent)
+    print(project_list[choice])
 
 
 
 
 
 
-def format_date():
-    date_string = input("Date (d/m/yyyy): ")  # e.g., "30/9/2022"
+
+def format_date(date_string):
     date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
-    print(f"That day is/was {date.strftime('%A')}")
-    print(date.strftime("%d/%m/%Y"))
     return date
 
 
