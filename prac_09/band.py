@@ -26,7 +26,7 @@ class Band:
         self.members.append(member)
 
     def play(self):
-        """Return a string showing what the members are playing"""
+        """prints a set of strings showing what the members are playing"""
         for member in self.members:
             if not member.instruments:
                 print(f"{member.name} needs an instrument!")
