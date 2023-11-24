@@ -3,7 +3,8 @@ CP1404
 Taxi class
 
 estimate: 30 min
-actual:
+actual: 45min
+error in car class had to be fixed
 """
 from car import Car
 
