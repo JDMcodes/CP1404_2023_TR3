@@ -1,7 +1,7 @@
 """
 CP1404 Practical - Squaring a number with Kivy
 estimate: 60 min
-actual:
+actual: 20min
 """
 
 from kivy.app import App
