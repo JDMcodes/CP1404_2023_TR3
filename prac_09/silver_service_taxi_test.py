@@ -1,17 +1,17 @@
 """
 CP1404
-Taxi class TEST
+silver service taxi class TEST
 
 estimate: 30 min
 actual: 30min
 """
 
-from taxi import Taxi
+from silver_service_taxi import SSTaxi
 
 
 def main():
-    """Taxi class TEST"""
-    my_taxi = Taxi("hummer", 100)
+    """silver service Taxi class TEST"""
+    my_taxi = SSTaxi("hummer", 100,2)
     my_taxi.drive(40)
     fare = my_taxi.get_fare()
     print(fare)
@@ -23,5 +23,3 @@ def main():
     print(my_taxi)
 
 main()
-
-

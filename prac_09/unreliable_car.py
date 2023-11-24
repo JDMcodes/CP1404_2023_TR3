@@ -3,7 +3,7 @@ CP1404
 Taxi class
 
 estimate: 30 min
-actual:
+actual: 20min
 """
 import random
 from car import Car
